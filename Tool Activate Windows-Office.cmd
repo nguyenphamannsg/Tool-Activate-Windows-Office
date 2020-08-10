@@ -24,7 +24,7 @@ if exist "%ProgramFiles(x86)%" (set bit=64-bit) else (set bit=32-bit)
 for /f "tokens=2*" %%c in ('"reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion" /v ProductName" 2^>nul') do set ProductName=%%d %bit%
 echo                                     %ProductName% 
 cd.
-type 1.txt
+type blanked.txt
 set /p dl1=Chọn ID và ấn enter:
 if %dl1% EQU 1 goto actwin1000
 if %dl1% EQU 2 goto upwin
